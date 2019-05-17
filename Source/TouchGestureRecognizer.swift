@@ -10,20 +10,20 @@ import UIKit
 
 class TouchGestureRecognizer: UIGestureRecognizer {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
-        if self.state == UIGestureRecognizerState.possible {
-            self.state = UIGestureRecognizerState.began
+        if self.state == UIGestureRecognizer.State.possible {
+            self.state = UIGestureRecognizer.State.began
         }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
-        self.state = UIGestureRecognizerState.changed
+        self.state = UIGestureRecognizer.State.changed
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent) {
-        self.state = UIGestureRecognizerState.ended
+        self.state = UIGestureRecognizer.State.ended
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent) {
-        self.state = UIGestureRecognizerState.cancelled
+        self.state = UIGestureRecognizer.State.cancelled
     }
 }
